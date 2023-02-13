@@ -31,6 +31,12 @@ public class Main {
             else answer+=Character.toLowerCase(x);
         }
 
+        // ASCII CODE를 활용
+        for (char x : str.toCharArray()){
+            if(x>=97 && x <=122) answer+=(x-32);
+            else answer+=(x+32);
+        }
+
 
         return answer;
 
