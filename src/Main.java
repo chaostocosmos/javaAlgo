@@ -34,7 +34,7 @@ public class Main {
         // ASCII CODE를 활용
         for (char x : str.toCharArray()){
             if(x>=97 && x <=122) answer+=(x-32);
-            else answer+=(x+32);
+            else answer+=(char)(x+32);
         }
 
 
@@ -71,13 +71,11 @@ public class Main {
 //    }
 
     public static void main(String[] args){
-
-        Main T = new Main();
-        Scanner kb = new Scanner(System.in);
-        String str = kb.next();
-        System.out.println(T.solution2(str));
-        //System.out.println(T.solution1(str,c));
-
+        Scanner in=new Scanner(System.in);
+        int input1 = in.nextInt();
+        int input2 = in.nextInt();
+        System.out.println(input1 + input2);
+        return ;
     }
 }
 

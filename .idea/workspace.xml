@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용">
+      <change afterPath="$PROJECT_DIR$/src/Solution03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -62,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676243190024</updated>
-      <workItem from="1676243191413" duration="4284000" />
+      <workItem from="1676243191413" duration="10624000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -71,7 +70,28 @@
       <option name="project" value="LOCAL" />
       <updated>1676246142406</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="문자열 찾기">
+      <created>1676247961919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676247961919</updated>
+    </task>
+    <task id="LOCAL-00003" summary="문자열 찾기 : 3번 부터는 신규 클래스 생성">
+      <created>1676332437129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1676332437129</updated>
+    </task>
+    <task id="LOCAL-00004" summary="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용">
+      <created>1676332642403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676332642403</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +110,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기" />
+    <MESSAGE value="문자열 찾기" />
+    <MESSAGE value="문자열 찾기 : 3번 부터는 신규 클래스 생성" />
+    <MESSAGE value="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용" />
+    <option name="LAST_COMMIT_MESSAGE" value="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용" />
   </component>
 </project>
