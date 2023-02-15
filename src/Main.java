@@ -1,9 +1,56 @@
-
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 
 public class Main {
+
+
+    public static void main(String[] args){
+        Main T = new Main();
+        Scanner in=new Scanner(System.in);
+        String input1 = in.nextLine();
+        //int input2 = in.nextInt();
+        System.out.println(T.solution3(input1));
+        return ;
+    }
+
+    public String solution3(String str){
+
+        //한 개의 문장이 주이지면 그 문장 속에서 가장 긴 단어를 출력하는 프로그램 작성
+        //문장속의 각 단어는 공백
+
+        // 첫 줄의 가장 긴 단어를 출력 가장 길이가 긴 단어가 여러개일 경우 문장속에서 가장 앞쪽에 위치한 단어
+        // split 사용
+
+        String anwser = "";
+        int m = Integer.MIN_VALUE , pos;
+        /*
+        String[] s =str.split( " ");
+        for (String x : s){
+            int len = x.length();
+            if(len>m){
+                m=len;
+                anwser=x;
+            }
+        }
+        */
+        // indexof , substring 사용
+        while ((pos=str.indexOf(' '))!=-1){
+            String tmp = str.substring(0, pos);
+            int len = tmp.length();
+            if(len>m){
+                m=len;
+                anwser=tmp;
+            }
+            str=str.substring(pos+1);
+        }
+        if(str.length()>m) anwser=str;
+
+        return anwser;
+
+    }
 
     public String solution2(String str){
         // 대문자와 소문자가 같이 존재하는 문자열을 입력받아 대문자는 소문자로 소문자는 대문자로 변환하여 출력하는 프로그램을 작성하세요.
@@ -70,12 +117,6 @@ public class Main {
 //
 //    }
 
-    public static void main(String[] args){
-        Scanner in=new Scanner(System.in);
-        int input1 = in.nextInt();
-        int input2 = in.nextInt();
-        System.out.println(input1 + input2);
-        return ;
-    }
+
 }
 
