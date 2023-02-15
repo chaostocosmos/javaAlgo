@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +42,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -72,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676243190024</updated>
       <workItem from="1676243191413" duration="10624000" />
-      <workItem from="1676415620811" duration="5084000" />
+      <workItem from="1676415620811" duration="5460000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -102,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676332642403</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기">
+      <created>1676423090682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676423090682</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +128,11 @@
     <MESSAGE value="문자열 찾기" />
     <MESSAGE value="문자열 찾기 : 3번 부터는 신규 클래스 생성" />
     <MESSAGE value="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용" />
-    <option name="LAST_COMMIT_MESSAGE" value="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용" />
+    <MESSAGE value="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
