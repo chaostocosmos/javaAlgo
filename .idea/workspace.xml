@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +38,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/20220509_lab/algo3/javaAlgo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,7 +60,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="애플리케이션.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -70,6 +74,7 @@
       <updated>1676243190024</updated>
       <workItem from="1676243191413" duration="10624000" />
       <workItem from="1676415620811" duration="5460000" />
+      <workItem from="1677803165892" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
