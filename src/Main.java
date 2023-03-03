@@ -109,6 +109,17 @@ $	$앞의 문자열로 문자가 끝나는지를 의미한다	a$ : a로 끝나�
 
  */
 
+//----
+/*
+9. 숫자만 추출
+문자와 숫자가 섞여있는 문자열이 주어지면 그 중 숫자만 추출하여 그 순서대로 자연수를 만듭니다.
+
+만약 “tge0a1h205er”에서 숫자만 추출하면 0, 1, 2, 0, 5이고 이것을 자연수를 만들면 1205이 됩니다.
+
+추출하여 만들어지는 자연수는 100,000,000을 넘지 않습니다.
+ */
+
+
 public class Main {
 
 
@@ -116,10 +127,21 @@ public class Main {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        System.out.println(T.solution7(str));
+        System.out.println(T.solution8(str));
     }
 
 
+    //숫자만 추출
+    private int solution8(String str){
+        int answer =0;
+        str = str.replaceAll("[^0-9]","");
+
+        answer = Integer.parseInt(str);
+
+
+
+        return answer;
+    }
     //유효한 펠랜드롬
     private String solution7(String str){
 
