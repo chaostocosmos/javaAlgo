@@ -27,19 +27,29 @@ public class Main {
 
     private String solution6(String str) {
         String answer = "";
+        int len = str.length();
         str = str.toUpperCase();
         StringBuilder sb = new StringBuilder();
         sb.append(str);
         String restring = sb.reverse().toString();
         //System.out.println(restring);
-        if(restring.equals(str)){
-            return "YES";
-        }
-        else {
-            return "NO";
-        }
+//        if(restring.equals(str)){
+//            return "YES";
+//        }
+//        else {
+//            return "NO";
+//        }
 
 
+
+
+        for(int i=0; i<len/2; i++){
+            if(str.charAt(i)!=str.charAt(len-i-1)){
+                return "NO";
+            }
+        }
+
+        return answer;
 
     }
 
