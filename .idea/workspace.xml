@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="펠린드 롬과 숫자 정규식 표현하기 ( replaceALL )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -75,6 +75,7 @@
       <workItem from="1676243191413" duration="10624000" />
       <workItem from="1676415620811" duration="5460000" />
       <workItem from="1677803165892" duration="2817000" />
+      <workItem from="1677990393479" duration="7604000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -125,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677850673590</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="펠린드 롬과 숫자 정규식 표현하기 ( replaceALL )">
+      <created>1677856547586</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677856547586</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +157,8 @@
     <MESSAGE value="문자열 찾기 : 3번 부터는 신규 클래스 생성 , 아스키 코드 활용" />
     <MESSAGE value="앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라고 합니다.&#10;&#10;문자열이 입력되면 해당 문자열이 회문 문자열이면 &quot;YES&quot;, 회문 문자열이 아니면 “NO&quot;를 출력하는 프로그램을 작성하세요.&#10;&#10;단 회문을 검사할 때 대소문자를 구분하지 않습니다." />
     <MESSAGE value="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
+    <MESSAGE value="펠린드 롬과 숫자 정규식 표현하기 ( replaceALL )" />
+    <option name="LAST_COMMIT_MESSAGE" value="펠린드 롬과 숫자 정규식 표현하기 ( replaceALL )" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

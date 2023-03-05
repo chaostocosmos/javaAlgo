@@ -119,6 +119,37 @@ $	$앞의 문자열로 문자가 끝나는지를 의미한다	a$ : a로 끝나�
 추출하여 만들어지는 자연수는 100,000,000을 넘지 않습니다.
  */
 
+/*
+10. 가장 짦은 문자거리
+
+한 개의 문자열과 문자가 주어지면 문자열의 각 문자가 문자와 떨어진 최소거리를 출력하는 프로그램 작성
+
+e의 위치를 가려내야함
+
+teachermode e
+
+1.
+1 0 1 2 1 0 1 2 2 1 0
+전체 인덱스를 순회
+1 0 1 2 3 0 1 2 3 4 0
+0 1 2 3 4 5 6 7 8 9 10
+  e       e         e
+3개의 e 중에서 양수만 나오게끔 하면되고
+0 - 1 = 1
+1 - 1 = 0
+2 - 1 = 1
+3 - 1 = 2
+4 - 1 = 3
+...
+0 - 5 = 5
+1 - 5
+
+
+알고리즘 설명
+
+
+
+ */
 
 public class Main {
 
@@ -126,21 +157,61 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        System.out.println(T.solution8(str));
+        String str = sc.next();
+        char t = sc.next().charAt(0);
+        for(int x : T.solution9(str,t)){
+            System.out.print(x+" ");
+        }
+
     }
 
+    public int[] solution9(String s, char t){
+
+        int[] answer = new int[s.length()];
+        int p = 1000;
+        for(int i=0; i<s.length();i++){
+            if(s.charAt(i)==t){
+                p = 0;
+                answer[i]=p;
+            }
+            else{
+                p++;
+                answer[i]=p;
+            }
+        }
+
+        p=1000;
+
+        for(int j=s.length()-1; j>=0; j--){
+            if(s.charAt(j)==t) p=0;
+            else {
+                p++;
+                answer[j]=Math.min(answer[j],p);
+            }
+        }
+        return answer;
+    }
 
     //숫자만 추출
     private int solution8(String str){
         int answer =0;
+        int answer2 = 0;
+        String str2 = str;
         str = str.replaceAll("[^0-9]","");
 
         answer = Integer.parseInt(str);
 
+        //case2
+
+        for(char x : str2.toCharArray()){
+            if(x >= 48 && x<=57 ){
+                answer2 = answer2*10+(x-48);
+            }
+        }
 
 
-        return answer;
+
+        return answer2;
     }
     //유효한 펠랜드롬
     private String solution7(String str){
@@ -161,6 +232,7 @@ public class Main {
 
 
     }
+
 
 
     private String solution6(String str) {
