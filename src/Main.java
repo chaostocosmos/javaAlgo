@@ -1,3 +1,4 @@
+import java.net.StandardSocketOptions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -145,24 +146,89 @@ teachermode e
 1 - 5
 
 
-알고리즘 설명
+"sout" + tab키
 
+11. 문자열 압축
+알파벳 대문자로 이루어진 문자열을 입력받아 같은 문자가 연속으로 반복되는 경우 반복되는
+문자 바로 오른쪽에 반복 횟수를 표기하는 방법으로 문자열을 압축하는 프로그램을 작성하시오.
+단 반복횟수가 1인 경우 생략합니다.
+
+KKHSSSSSSSE -> K2HS7E
+KSTTTSEEKFKKKDJJGG -> KST3SE2KFK3DJ2G2
+TTTTTTTTTTTTTTTTTTTTTTKKKKKGG
+1. 문자열을 순회하면서
+2. 첫 문자는 그대로 출력하면서
+3. 이전 인덱스와 다를 경우 cnt는 초기화
+4. 그런데 같은 문자열을 만나는 경우 ( 다음 인덱스가 이전 인덱스와 같다면, cnt를 추가한다)
+
+현수는 영희에게 알파벳 대문자로 구성된 비밀편지를 매일 컴퓨터를 이용해 보냅니다.
+비밀편지는 현수와 영희가 서로 약속한 암호로 구성되어 있습니다.
+비밀편지는 알파벳 한 문자마다 # 또는 *이 일곱 개로 구성되어 있습니다.
+만약 현수가 “#*****#”으로 구성된 문자를 보냈다면 영희는 현수와 약속한 규칙대로 다음과 같이 해석합니다.
+1. “#*****#”를 일곱자리의 이진수로 바꿉니다. #은 이진수의 1로, *이진수의 0으로 변환합니다. 결과는 “1000001”로 변환됩니다.
+
+2. 바뀐 2진수를 10진수화 합니다. “1000001”을 10진수화 하면 65가 됩니다.
+3. 아스키 번호가 65문자로 변환합니다. 즉 아스크번호 65는 대문자 'A'입니다.
+
+참고로 대문자들의 아스키 번호는 'A'는 65번, ‘B'는 66번, ’C'는 67번 등 차례대로 1씩 증가하여 ‘Z'는 90번입니다.
+현수가 4개의 문자를 다음과 같이 신호로 보냈다면
+#****###**#####**#####**##**
+
+이 신호를 4개의 문자신호로 구분하면
+
+#****## --> 'C'
+#**#### --> 'O'
+#**#### --> 'O'
+#**##** --> 'L'
+
+최종적으로 “COOL"로 해석됩니다.
+현수가 보낸 신호를 해석해주는 프로그램을 작성해서 영희를 도와주세요.
+
+
+알고리즘 설명
 
 
  */
 
 public class Main {
-
-
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        char t = sc.next().charAt(0);
-        for(int x : T.solution9(str,t)){
-            System.out.print(x+" ");
+        System.out.println(T.solution10(str));
+        //Solution9
+//        char t = sc.next().charAt(0);
+//        for(int x : T.solution9(str,t)){
+//            System.out.print(x+" ");
+//        }
+    }
+
+    public String solution10(String s){
+        /*
+        String answer = "";
+        s = s+" ";
+        빈문자 추가해서 진행하기
+         */
+
+        String answer = "";
+        int cnt = 1;
+        StringBuilder sb = new StringBuilder();
+        for(int i=0;i<=s.length()-1;i++){
+            if(i<s.length()-1 && s.charAt(i)==s.charAt(i+1)){
+                cnt++;
+            }
+            else{
+                sb.append(s.charAt(i));
+                if(cnt>1){
+                    sb.append(String.valueOf(cnt));
+                }
+                cnt = 1;
+            }
         }
 
+        answer = sb.toString();
+
+        return answer;
     }
 
     public int[] solution9(String s, char t){
