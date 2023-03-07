@@ -208,6 +208,16 @@ public class Main {
 //        for(int x : T.solution9(str,t)){
 //            System.out.print(x+" ");
 //        }
+
+
+//      Case2
+        /*
+        Scanner kb = new Scanner(System.in);
+        int n = kb.newtInt();
+        String str = kb.next();
+        System.out.printLn(T.Solution(n,str));
+
+         */
     }
     /*
     1000011 1001111 1001111 1001100
@@ -227,7 +237,20 @@ public class Main {
     #**##** --> 'L'
      */
     public String solution11(String s , int a){
+
         String answer = "";
+
+        //CASE2
+        /*
+        for(int i=0; i<n; i++){
+
+            String tmp = s.substring(0,7).replace("#" , "1").replace("*","0");
+            int num = Integer.parseInt(tmp,2);
+            answer += (char)num;
+            s=s.substring(7)
+
+        }
+         */
         String temp = "";
         int cnt = 0;
         s = s.replace("#" , "1");
