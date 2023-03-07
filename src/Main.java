@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.function.IntBinaryOperator;
 
 
 //회문 문자열
@@ -161,6 +161,7 @@ TTTTTTTTTTTTTTTTTTTTTTKKKKKGG
 3. 이전 인덱스와 다를 경우 cnt는 초기화
 4. 그런데 같은 문자열을 만나는 경우 ( 다음 인덱스가 이전 인덱스와 같다면, cnt를 추가한다)
 
+
 현수는 영희에게 알파벳 대문자로 구성된 비밀편지를 매일 컴퓨터를 이용해 보냅니다.
 비밀편지는 현수와 영희가 서로 약속한 암호로 구성되어 있습니다.
 비밀편지는 알파벳 한 문자마다 # 또는 *이 일곱 개로 구성되어 있습니다.
@@ -172,7 +173,11 @@ TTTTTTTTTTTTTTTTTTTTTTKKKKKGG
 
 참고로 대문자들의 아스키 번호는 'A'는 65번, ‘B'는 66번, ’C'는 67번 등 차례대로 1씩 증가하여 ‘Z'는 90번입니다.
 현수가 4개의 문자를 다음과 같이 신호로 보냈다면
-#****###**#####**#####**##**
+
+#****##
+#**####
+#**####
+#**##**
 
 이 신호를 4개의 문자신호로 구분하면
 
@@ -187,6 +192,7 @@ TTTTTTTTTTTTTTTTTTTTTTKKKKKGG
 
 알고리즘 설명
 
+#****##
 
  */
 
@@ -194,13 +200,50 @@ public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
+        int a = Integer.parseInt(sc.next());
         String str = sc.next();
-        System.out.println(T.solution10(str));
+        System.out.println(T.solution11(str , a));
         //Solution9
 //        char t = sc.next().charAt(0);
 //        for(int x : T.solution9(str,t)){
 //            System.out.print(x+" ");
 //        }
+    }
+    /*
+    1000011 1001111 1001111 1001100
+    0123456 7 8 9 10 11 12 13
+    4
+    1. 받아온 문자를 n등분 해야함
+    2. 그 문자를 변환 작업 후 char[]에 기입
+    4. tostring으로 전환
+#****###**#####**#####**##**
+     */
+
+
+    /*
+    #****## --> 'C'
+    #**#### --> 'O'
+    #**#### --> 'O'
+    #**##** --> 'L'
+     */
+    public String solution11(String s , int a){
+        String answer = "";
+        String temp = "";
+        int cnt = 0;
+        s = s.replace("#" , "1");
+        s = s.replace("*","0");
+        for(int i=1; i<=s.length();i++){
+            if(i>1 && i%7==0){
+                temp = s.substring(cnt,i);
+                char c = (char)Integer.parseInt(temp,2);
+                temp = "";
+                cnt = i;
+                answer += c;
+            }
+        }
+
+
+        return  answer;
     }
 
     public String solution10(String s){
