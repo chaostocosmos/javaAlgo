@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="문자거리 ( 주석확인 )">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter 1 Clear">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main_chp1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -58,6 +60,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,6 +79,7 @@
       <workItem from="1677803165892" duration="2817000" />
       <workItem from="1677990393479" duration="8532000" />
       <workItem from="1678099516691" duration="2808000" />
+      <workItem from="1678277882143" duration="4521000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -136,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678000073167</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Chapter 1 Clear">
+      <created>1678192533224</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678192533224</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +177,8 @@
     <MESSAGE value="3번 가장 긴 단어 출력하기 1. split을 통한 방법 . 2. indexof와 substring으로 출력하기" />
     <MESSAGE value="펠린드 롬과 숫자 정규식 표현하기 ( replaceALL )" />
     <MESSAGE value="문자거리 ( 주석확인 )" />
-    <option name="LAST_COMMIT_MESSAGE" value="문자거리 ( 주석확인 )" />
+    <MESSAGE value="Chapter 1 Clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 1 Clear" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
