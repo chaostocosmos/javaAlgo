@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter 1 Clear">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main_chp1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -80,6 +78,7 @@
       <workItem from="1677990393479" duration="8532000" />
       <workItem from="1678099516691" duration="2808000" />
       <workItem from="1678277882143" duration="4521000" />
+      <workItem from="1678368056905" duration="1366000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
