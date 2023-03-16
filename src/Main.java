@@ -40,28 +40,53 @@ A B A B D
 첫 줄에 총 항수 N(3<=N<=45)이 입력된다.
 첫 줄에 피보나치 수열을 출력합니다.
 10
-
+1 1 2 3 5 8 13 21 34 55
  */
 public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] arr = new int[n];
-        int[] arr2 = new int[n];
-        for(int i=0; i<n; i++){
-            arr[i]=sc.nextInt();
+        for(int x : T.solution4(n)){
+            System.out.print(x + " ");
         }
-        for(int j=0; j<n; j++){
-            arr2[j]=sc.nextInt();
-        }
-
-        for(String x : T.solution3(n,arr,arr2)){
-            System.out.println(x);
-        }
+//        int[] arr = new int[n];
+//        int[] arr2 = new int[n];
+//        for(int i=0; i<n; i++){
+//            arr[i]=sc.nextInt();
+//        }
+//        for(int j=0; j<n; j++){
+//            arr2[j]=sc.nextInt();
+//        }
+//
+//        for(String x : T.solution3(n,arr,arr2)){
+//            System.out.println(x);
+//        }
 
         //System.out.println(T.solution2(n,arr));
         // 인자로 넘겨주는데서 다 처리하면 왜 함수로 넘기냐 여기서 그냥 다처리하지 ㅡㅡ
+    }
+//    1  1    2    3    5 8 13 21 34 55
+//    0 0+1  1+2  2+3
+    private ArrayList<Integer> solution4(int n){
+        ArrayList<Integer> answer = new ArrayList<>();
+
+        for(int i=0;i<n;i++){
+            if(answer.isEmpty()){
+                answer.add(1);
+            } else if (answer.size()==1) {
+                answer.add(1);
+
+            }else{
+                answer.add(answer.get(i-2)+answer.get(i-1));
+            }
+
+
+        }
+
+
+        return answer;
+
     }
 
     private String[] solution3(int n, int[] arr, int[] arr2){
