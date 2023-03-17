@@ -43,6 +43,7 @@ A B A B D
 1 1 2 3 5 8 13 21 34 55
 
 소수(에라토스테네스 체)
+
 설명
 자연수 N이 입력되면 1부터 N까지의 소수의 개수를 출력하는 프로그램을 작성하세요.
 만약 20이 입력되면 1부터 20까지의 소수는 2, 3, 5, 7, 11, 13, 17, 19로 총 8개입니다.
@@ -59,9 +60,10 @@ public class Main {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for(int x : T.solution4(n)){
-            System.out.print(x + " ");
-        }
+        System.out.println(T.solution5(n));
+//        for(int x : T.solution4(n)){
+//            System.out.print(x + " ");
+//        }
 //        int[] arr = new int[n];
 //        int[] arr2 = new int[n];
 //        for(int i=0; i<n; i++){
@@ -80,6 +82,25 @@ public class Main {
     }
 //    1  1    2    3    5 8 13 21 34 55
 //    0 0+1  1+2  2+3
+
+    // 제공된 자연수 n개에 대해서
+    // 2부터 n까지 증가되는 수 중 그 배수가 존재한다면 그 수는 배제
+    // 전체를 순회했을 떄 남은 수는 리스트에 추가
+    private int solution5(int n){
+        int answer = 0;
+        int[] ch = new int[n+1];
+        for(int i=2;i<=n;i++){
+            if(ch[i]==0){
+                answer++;
+                for(int j=i; j<=n; j=j+i) ch[j]=1;
+            }
+        }
+
+        return answer;
+
+
+    }
+
     private ArrayList<Integer> solution4(int n){
         ArrayList<Integer> answer = new ArrayList<>();
 

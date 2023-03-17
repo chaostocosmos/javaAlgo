@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter2 피보나치 수열 코딩">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter2 에라토스테네스의 체">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +80,8 @@
       <workItem from="1678277882143" duration="4521000" />
       <workItem from="1678368056905" duration="2270000" />
       <workItem from="1678886238012" duration="1728000" />
-      <workItem from="1678970887030" duration="903000" />
+      <workItem from="1678970887030" duration="1548000" />
+      <workItem from="1679060590143" duration="3074000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -179,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678971647327</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Chapter2 에라토스테네스의 체">
+      <created>1678971845253</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678971845253</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +219,8 @@
     <MESSAGE value="Chapter2 가위바위보" />
     <MESSAGE value="Chapter2 피보나치 수열" />
     <MESSAGE value="Chapter2 피보나치 수열 코딩" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter2 피보나치 수열 코딩" />
+    <MESSAGE value="Chapter2 에라토스테네스의 체" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter2 에라토스테네스의 체" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
