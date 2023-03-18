@@ -112,6 +112,35 @@ public class Main {
 //
 //
 //2. 뒤집힌 수가 소수인지 판별해야함
+
+    public boolean isPrime(int num){
+
+        if(num==1) return false;
+        for(int i=2; i<num; i++){
+            if(num%i==0){
+                return false;
+            }
+
+        }
+        return true;
+    }
+
+    public  ArrayList<Integer> solution7(int n, int[] arr){
+        ArrayList<Integer> answer = new ArrayList<>();
+        for(int i=0; i<n; i++){
+            int tmp = arr[i];
+            int res = 0;
+            while (tmp>0){
+                int t= tmp%10;
+                res = res*10+t;
+                tmp = tmp/10;
+            }
+            if(isPrime(res)){
+                answer.add(res);
+            }
+        }
+        return answer;
+    }
     private List<Integer> solution6(int n, int[] arr) {
 
         int[] temp = new int[n];
