@@ -81,7 +81,8 @@
       <workItem from="1678368056905" duration="2270000" />
       <workItem from="1678886238012" duration="1728000" />
       <workItem from="1678970887030" duration="1548000" />
-      <workItem from="1679060590143" duration="3074000" />
+      <workItem from="1679060590143" duration="3470000" />
+      <workItem from="1679113973601" duration="6227000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678971845253</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Chapter2 에라토스테네스의 체">
+      <created>1679065577923</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679065577923</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -54,31 +55,94 @@ A B A B D
 20
 8
 
+설명
+
+N개의 자연수가 입력되면 각 자연수를 뒤집은 후 그 뒤집은 수가 소수이면 그 소수를 출력하는 프로그램을 작성하세요.
+예를 들어 32를 뒤집으면 23이고, 23은 소수이다. 그러면 23을 출력한다. 단 910를 뒤집으면 19로 숫자화 해야 한다.
+첫 자리부터의 연속된 0은 무시한다.
+
+입력
+첫 줄에 자연수의 개수 N(3<=N<=100)이 주어지고, 그 다음 줄에 N개의 자연수가 주어진다.
+각 자연수의 크기는 100,000를 넘지 않는다.
+
+출력
+첫 줄에 뒤집은 소수를 출력합니다.
+출력순서는 입력된 순서대로 출력합니다.
+9
+32 55 62 20 250 370 200 30 100
+23 2 73 2 3
+
+1. 수를 뒤집어야 하고
+1의 자리일때는 나머지를 구하고 10의 자리일땐 나눈다 100의 자리일떄도 나눈다
+그런데 1의 자리였던 부분이 0이면 추가하지 않고 2번쨰 자리도 0 이면 추가하지 않는다.
+
+
+2. 뒤집힌 수가 소수인지 판별해야함
+
+
  */
 public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        System.out.println(T.solution5(n));
+//        System.out.println(T.solution5(n));
 //        for(int x : T.solution4(n)){
 //            System.out.print(x + " ");
 //        }
-//        int[] arr = new int[n];
+        int[] arr = new int[n];
 //        int[] arr2 = new int[n];
-//        for(int i=0; i<n; i++){
-//            arr[i]=sc.nextInt();
-//        }
+        for(int i=0; i<n; i++){
+            arr[i]=sc.nextInt();
+        }
 //        for(int j=0; j<n; j++){
 //            arr2[j]=sc.nextInt();
 //        }
 //
-//        for(String x : T.solution3(n,arr,arr2)){
-//            System.out.println(x);
-//        }
+        for(int x : T.solution6(n,arr)){
+            System.out.print(x + " ");
+        }
 
         //System.out.println(T.solution2(n,arr));
         // 인자로 넘겨주는데서 다 처리하면 왜 함수로 넘기냐 여기서 그냥 다처리하지 ㅡㅡ
+    }
+//1. 수를 뒤집어야 하고
+//1의 자리일때는 나머지를 구하고 10의 자리일땐 나눈다 100의 자리일떄도 나눈다
+//    그런데 1의 자리였던 부분이 0이면 추가하지 않고 2번쨰 자리도 0 이면 추가하지 않는다.
+//
+//
+//2. 뒤집힌 수가 소수인지 판별해야함
+    private List<Integer> solution6(int n, int[] arr) {
+
+        int[] temp = new int[n];
+        List<Integer> answer = new ArrayList<>();
+        int conut = 0;
+        String sb = "";
+
+        for (int i=0; i<n; i++){
+
+            sb = String.valueOf(arr[i]%10);
+            while (arr[i]>10){
+                arr[i] /= 10;
+                sb +=  String.valueOf(arr[i]%10);
+
+            }
+            temp[i] = Integer.parseInt(sb);
+        }
+        for(int k=0; k<temp.length;k++){
+            if(temp[k]>1){
+                for(int j=2;j<temp[k];j++){
+                    if(temp[k]%j==0){
+                        conut++;
+                    }
+                }
+                if(conut==0){
+                    answer.add(temp[k]);
+                }
+                conut=0;
+            }
+        }
+        return answer;
     }
 //    1  1    2    3    5 8 13 21 34 55
 //    0 0+1  1+2  2+3
