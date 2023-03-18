@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 /*
@@ -98,30 +99,71 @@ OX 문제는 맞거나 틀린 두 경우의 답을 가지는 문제를 말한다
 10
 1 0 1 1 1 0 0 1 1 0
 
+설명
+
+N명의 학생의 국어점수가 입력되면 각 학생의 등수를 입력된 순서대로 출력하는 프로그램을 작성하세요.
+같은 점수가 입력될 경우 높은 등수로 동일 처리한다.
+즉 가장 높은 점수가 92점인데 92점이 3명 존재하면 1등이 3명이고 그 다음 학생은 4등이 된다.
+
+입력
+첫 줄에 N(3<=N<=100)이 입력되고, 두 번째 줄에 국어점수를 의미하는 N개의 정수가 입력된다.
+
+출력
+입력된 순서대로 등수를 출력한다.
+
+5
+87 89 92 100 76
+
+
  */
 public class Main {
     public static void main(String[] args) {
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-//        System.out.println(T.solution5(n));
-//        for(int x : T.solution4(n)){
-//            System.out.print(x + " ");
-//        }
+
         int[] arr = new int[n];
-//        int[] arr2 = new int[n];
         for(int i=0; i<n; i++){
             arr[i]=sc.nextInt();
         }
-        System.out.println(T.solution8(n,arr));
-//        for(int j=0; j<n; j++){
-//            arr2[j]=sc.nextInt();
-//        }
-//
+        for(int x : T.solution9(n,arr)){
+            System.out.print(x + " ");
+        }
 
 
         //System.out.println(T.solution2(n,arr));
         // 인자로 넘겨주는데서 다 처리하면 왜 함수로 넘기냐 여기서 그냥 다처리하지 ㅡㅡ
+    }
+
+    /*
+    answer 에는 등수가 들어가는데 max value 와 동일하면 해당인덱스는 1이 되는겨
+     */
+
+    private int[] solution9(int n, int[] arr) {
+
+        ArrayList<Integer> ai = new ArrayList<>();
+
+        int[] answer = new int[n];
+        int x = Integer.MIN_VALUE;
+        int temp = 1;
+        for(int i=0; i<n;i++){
+            if(arr[i]>=x){
+                temp = x;
+                x = arr[i];
+                answer[i] = 1;
+                for (int k=0; k<i; k++){
+                    answer[k]+=1;
+                }
+            }
+
+
+
+        }
+
+        System.out.println(x);
+
+        return answer;
+
     }
 
     private int solution8(int n, int[] arr) {
@@ -137,13 +179,10 @@ public class Main {
                 score[i] = 0;
                 count = 0;
             }
-
         }
-
         for(int x : score){
             answer += x;
         }
-
         return answer;
     }
 //1. 수를 뒤집어야 하고
