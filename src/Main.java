@@ -114,6 +114,19 @@ N명의 학생의 국어점수가 입력되면 각 학생의 등수를 입력된
 5
 87 89 92 100 76
 
+30
+65 54 81 56 54 70 61 87 99 58 78 99 99 70 96 60 77 84 67 86 84 98 63 96 83 54 52 86 78 69
+
+30
+65 54 81 56 54 70 61 87 99 58 78 99 99 70 96 60 77 84 67 86 84 98 63 96 83 54 52 86 78 69
+
+21 27 13 26 29 17 23 7 1 25 14 1 1 22 5 24 16 10 20 8 11 4 22 6 12 49 30 10 24 19
+21 27 13 26 29 17 23 7 1 25 14 1 1 22 5 24 16 10 20 8 11 4 22 6 12 49 30 10 24 19
+
+21 27 13 26 27 17 23 7 1 25 14 1 1 17 5 24 16 10 20 8 10 4 22 5 12 27 30 8 14 19
+21 27 13 26 27 17 23 7 1 25 14 1 1 17 5 24 16 10 20 8 10 4 22 5 12 27 30 8 14 19
+21 5 13 26 7 12 23 7 1 25 4 1 1 17 4 24 16 9 20 6 10 4 22 5 12 27 30 8 14 19
+
 
  */
 public class Main {
@@ -131,36 +144,48 @@ public class Main {
         }
 
 
-        //System.out.println(T.solution2(n,arr));
-        // 인자로 넘겨주는데서 다 처리하면 왜 함수로 넘기냐 여기서 그냥 다처리하지 ㅡㅡ
+
     }
 
-    /*
-    answer 에는 등수가 들어가는데 max value 와 동일하면 해당인덱스는 1이 되는겨
-     */
+
 
     private int[] solution9(int n, int[] arr) {
 
-        ArrayList<Integer> ai = new ArrayList<>();
-
         int[] answer = new int[n];
         int x = Integer.MIN_VALUE;
-        int temp = 1;
+
         for(int i=0; i<n;i++){
             if(arr[i]>=x){
-                temp = x;
+
                 x = arr[i];
                 answer[i] = 1;
+
                 for (int k=0; k<i; k++){
-                    answer[k]+=1;
+                    if(arr[i]>arr[k]){
+                        answer[k]+=1;
+                    }
+                    else {
+                        answer[k] = 1;
+                    }
+                }
+
+
+            }
+            else {
+                answer[i] += 1;
+                for(int j=0; j<=i; j++){
+                    if(arr[i]<arr[j]){
+                        answer[i]+=1;
+                    }
+                    else if (arr[i]>arr[j]) {
+                        answer[j]+=1;
+                    }
                 }
             }
 
 
 
         }
-
-        System.out.println(x);
 
         return answer;
 
