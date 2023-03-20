@@ -142,19 +142,99 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int[] arr = new int[n];
+        int[][] arr = new int[n][n];
         for(int i=0; i<n; i++){
-            arr[i]=sc.nextInt();
+            for (int j=0; j<n; j++){
+                arr[i][j] = sc.nextInt();
+            }
         }
-        for(int x : T.solution9(n,arr)){
-            System.out.print(x + " ");
-        }
+
+        System.out.println(T.solution10(n,arr));
 
 
 
     }
 
+    /*
+    격자판 최대합
+    int answer = 0;
+    int sum1 , sum2
+    int x = Integer.MIN_VALUE;
+    for(int i=0; i<n; i++){
+        sum1=sum2=0;
+        for(int j=0; j<n; j++){
+            sum1+=arr[i][j]
+            sum2+=arr[j][i]
+        }
+        answer = Math.max(answer,sum1);
+        answer = Math.max(answer,sum2);
+        }
+    }
+    sum1=sum2=0;
+    for(int i=0; i<n; i++){
+        sum1+=arr[i][i];
+        sum2+=arr[i][n-i-1];
+    }
 
+     */
+
+    private int solution10(int n, int[][] arr){
+        int answer = 0;
+        int x = Integer.MIN_VALUE;
+        int[] sum1 = new int[n];
+        int[] sum2 = new int[n];
+        int i , j , sum3 = 0 ,sum4 =0;
+
+        for(i=0; i<n; i++){
+            for (j=0; j<n; j++){
+                sum1[i]+=arr[i][j];
+                sum2[i]+=arr[j][i];
+
+                if(i==j){
+                    sum3+=arr[i][j];
+                }
+                if(i+j==n-1){
+                    sum4+=arr[i][j];
+                }
+            }
+            if(sum1[i]>=x){
+                x = sum1[i];
+            }
+            if(sum2[i]>=x){
+                x = sum2[i];
+            }
+            if(sum3>=x){
+                x = sum3;
+            }
+            if(sum4>=x){
+                x = sum4;
+            }
+
+
+        }
+
+
+
+        answer = x;
+        return answer;
+    }
+
+
+    /*
+    등수구하기 강의 ver
+     private int[] solution9(int n, int[] arr) {
+        int[] answer = new int[n]
+        for(int i=0; i<n; i++){
+            int cnt = 1;
+            for (int j=0; j<n; j++){
+                if(arr[j]>arr[i]) cnt++;
+            }
+            answer[i] = cnt;
+         }
+
+        return answer;
+     {
+     */
 
     private int[] solution9(int n, int[] arr) {
 
