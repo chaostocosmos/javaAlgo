@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="등수구하기 연습중">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter2 격자판 최대합 ( 강의 코드 포함 )">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -83,6 +83,7 @@
       <workItem from="1678970887030" duration="1548000" />
       <workItem from="1679060590143" duration="3470000" />
       <workItem from="1679113973601" duration="13577000" />
+      <workItem from="1679400793139" duration="2328000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -224,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679280123752</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Chapter2 격자판 최대합 ( 강의 코드 포함 )">
+      <created>1679317902025</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1679317902025</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +268,8 @@
     <MESSAGE value="Chapter2 뒤집은 소수&#10;소수 판별에 주의 이거는count를 잘 활용하자&#10;함수 활용하기" />
     <MESSAGE value="Chapter2 OX 문제 count를 잘 활용하자&#10;함수 활용하기" />
     <MESSAGE value="Chapter 2 등수구하기 분기처리를 잘하자" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 2 등수구하기 분기처리를 잘하자" />
+    <MESSAGE value="Chapter2 격자판 최대합 ( 강의 코드 포함 )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter2 격자판 최대합 ( 강의 코드 포함 )" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
