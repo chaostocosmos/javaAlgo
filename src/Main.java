@@ -165,12 +165,14 @@ N*N의 격자판이 주어지면 각 행의 합, 각 열의 합, 두 대각선�
 그는 자기반 학생 중에서 1학년부터 5학년까지 지내오면서 한번이라도 같은 반이었던 사람이 가장 많은 학생을 임시 반장으로 정하려 한다.
 그래서 김갑동 선생님은 각 학생들이 1학년부터 5학년까지 몇 반에 속했었는지를 나타내는 표를 만들었다.
 예를 들어 학생 수가 5명일 때의 표를 살펴보자.
+
 5
 2 3 1 7 3
 4 1 9 6 8
 5 5 2 4 4
 6 5 2 6 7
 8 4 2 2 2
+
 위 경우에 4번 학생을 보면 3번 학생과 2학년 때 같은 반이었고, 3번 학생 및 5번 학생과 3학년 때 같은 반이었으며,
 2번 학생과는 4학년 때 같은 반이었음을 알 수 있다. 그러므로 이 학급에서 4번 학생과 한번이라도
 같은 반이었던 사람은 2번 학생, 3번 학생과 5번 학생으로 모두 3명이다.
@@ -190,23 +192,102 @@ N*N의 격자판이 주어지면 각 행의 합, 각 열의 합, 두 대각선�
 public class Main {
     public static void main(String[] args) {
         Main T = new Main();
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        Scanner kb = new Scanner(System.in);
+        int n=kb.nextInt();
+        int[][] arr=new int[n+1][6];
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=5; j++){
+                arr[i][j]=kb.nextInt();
+            }
+        }
+        System.out.print(T.check_solution(n, arr));
+//        Main T = new Main();
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//        int[][] arr = new int[n+1][6];
+//
+//        for(int i=1; i<n; i++){
+//            for (int j=1; j<=5; j++){
+//                arr[i][j] = sc.nextInt();
+//            }
+//        }
+//        System.out.print(T.check_solution(n,arr));
 
-        int[][] arr = new int[n+2][n+2];
+    }
+    //정답
+    private int check_solution(int n, int[][] arr){
+        int answer=0, max=0;
+        for(int i=1; i<=n; i++){
+            int cnt=0;
+            for(int j=1; j<=n; j++){
+                for(int k=1; k<=5; k++){
+                    if(arr[i][k]==arr[j][k]){
+                        cnt++;
+                        break;
+                    }
+                }
+            }
+            if(cnt>max){
+                max=cnt;
+                answer=i;
+            }
+        }
+        return answer;
+    }
 
-        for(int i=1; i<n+1; i++){
-            for (int j=1; j<n+1; j++){
-                arr[i][j] = sc.nextInt();
 
+    private int solution12_right(int n, int[][] arr){
+        int answer = 0 , max=0;
+
+        for(int i=1; i<=n; i++){
+            int cnt = 0;
+            for(int j=1; j<=n; j++){
+                for(int k=1; k<=5; k++){
+                    if(arr[i][k]==arr[j][k]){
+                        cnt++;
+                        break;
+                    }
+                }
+            }
+            if(cnt>max){
+                max=cnt;
+                answer = i;
             }
         }
 
-        System.out.println(T.solution11(n,arr));
-
-
-
+        return answer;
     }
+
+
+    //오답
+    private int solution12(int n, int[][] arr) {
+
+        int answer = n , minv=Integer.MIN_VALUE ;
+        int[] dx = new int[n*2];
+        int[] acc = new int[n];
+        for(int x=0; x<n*2;x++){
+            dx[x] = -n+x;
+        }
+
+        for(int i=0;i<n;i++){
+            for(int j=0; j<5; j++){
+                for(int k=0; k<n*2;k++){
+                    int nx = i+dx[k];
+                    if(nx>=0 && nx<n && i!=nx && arr[i][j] == arr[nx][j]){
+                        acc[i] += 1;
+                        break;
+                    }
+                }
+            }
+        }
+
+        for(int x : acc){
+            System.out.println("같은 반 겹치는 수 " + x);
+        }
+
+        return answer;
+    }
+
     /*
     격자 안 봉우리
     Class Main
@@ -251,8 +332,6 @@ public class Main {
                 }
             }
         }
-
-
         return answer;
     }
 
