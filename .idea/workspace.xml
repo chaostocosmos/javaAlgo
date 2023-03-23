@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="등수구하기 연습중">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter 2 임시반장 Case 분석 후 시작하기">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -239,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679403193216</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Chapter 2 임시반장 Case 분석 후 시작하기">
+      <created>1679445129185</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679445129185</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +283,8 @@
     <MESSAGE value="Chapter2 OX 문제 count를 잘 활용하자&#10;함수 활용하기" />
     <MESSAGE value="Chapter 2 등수구하기 분기처리를 잘하자" />
     <MESSAGE value="Chapter2 격자판 최대합 ( 강의 코드 포함 )" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter2 격자판 최대합 ( 강의 코드 포함 )" />
+    <MESSAGE value="Chapter 2 임시반장 Case 분석 후 시작하기" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter 2 임시반장 Case 분석 후 시작하기" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
