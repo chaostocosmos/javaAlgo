@@ -208,7 +208,7 @@ M번의 수학성적이 주어지면 멘토와 멘티가 되는 짝을 만들 �
 3 , 1
 4 , 2
 3 , 2
-
+4 3
 3 4 1 2
 4 3 2 1
 3 1 4 2
@@ -224,13 +224,16 @@ public class Main {
         Main T = new Main();
         Scanner kb = new Scanner(System.in);
         int n=kb.nextInt();
-        int[][] arr=new int[n+1][6];
-        for(int i=1; i<=n; i++){
-            for(int j=1; j<=5; j++){
+        int m=kb.nextInt();
+
+        int[][] arr=new int[m][n];
+
+        for(int i=0; i<m; i++){
+            for(int j=0; j<n; j++){
                 arr[i][j]=kb.nextInt();
             }
         }
-        System.out.print(T.check_solution(n, arr));
+        System.out.print(T.lastSolution(n, m,arr));
 //        Main T = new Main();
 //        Scanner sc = new Scanner(System.in);
 //        int n = sc.nextInt();
@@ -244,6 +247,18 @@ public class Main {
 //        System.out.print(T.check_solution(n,arr));
 
     }
+
+    private int lastSolution(int n, int m , int[][] arr){
+        int answer = 0;
+        for(int[] x : arr){
+            for(int y : x){
+                System.out.print(y + " ");
+            }
+            System.out.println(" ");
+        }
+        return answer;
+    }
+
     //정답
     private int check_solution(int n, int[][] arr){
         int answer=0, max=0;
