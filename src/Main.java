@@ -248,13 +248,32 @@ public class Main {
 
     }
 
+
+    /*
+    4 3
+        3 4 1 2
+        4 3 2 1
+        3 1 4 2
+     */
+
     private int lastSolution(int n, int m , int[][] arr){
         int answer = 0;
-        for(int[] x : arr){
-            for(int y : x){
-                System.out.print(y + " ");
+        for(int i=1; i<=n;i++){
+            for(int j=1; j<=n; j++){
+                int cnt = 0;
+                for(int k=0; k<m; k++){
+                    int pi=0 , pj=0;
+                    for(int s=0; s<n; s++){
+                        if(arr[k][s]==i) pi=s;
+                        if(arr[k][s]==j) pj=s;
+                    }
+                    if(pi<pj) cnt++;
+                }
+                if(cnt==m){
+                    answer++;
+                }
+
             }
-            System.out.println(" ");
         }
         return answer;
     }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="등수구하기 연습중">
+    <list default="true" id="abdfdd84-1712-4f3b-aafd-f61130ad3f75" name="변경" comment="Chapter2 Last 멘토링">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -84,6 +84,7 @@
       <workItem from="1679060590143" duration="3470000" />
       <workItem from="1679113973601" duration="13577000" />
       <workItem from="1679400793139" duration="2627000" />
+      <workItem from="1679811901982" duration="846000" />
     </task>
     <task id="LOCAL-00001" summary="test commit : git commit 연계 &#10;next algo sol : 문자열 찾기">
       <created>1676246142406</created>
@@ -246,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679445129185</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Chapter2 Last 멘토링">
+      <created>1679574336229</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679574336229</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +292,8 @@
     <MESSAGE value="Chapter 2 등수구하기 분기처리를 잘하자" />
     <MESSAGE value="Chapter2 격자판 최대합 ( 강의 코드 포함 )" />
     <MESSAGE value="Chapter 2 임시반장 Case 분석 후 시작하기" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chapter 2 임시반장 Case 분석 후 시작하기" />
+    <MESSAGE value="Chapter2 Last 멘토링" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chapter2 Last 멘토링" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
