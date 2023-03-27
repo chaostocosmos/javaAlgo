@@ -248,9 +248,11 @@ public class Main {
 
     }
 
-
+//    출력설명
+//            (3,1) (3,2) (4,2) 와 같이 3가지 경우의
     /*
-    4 3
+    4 3 x -> 등수
+    y는 시험 차수
         3 4 1 2
         4 3 2 1
         3 1 4 2
@@ -258,14 +260,19 @@ public class Main {
 
     private int lastSolution(int n, int m , int[][] arr){
         int answer = 0;
+        // 1. 멘토 멘티가 나올 수 있는 전체 경우의 수를 잡는다.
+        // 2. 시험의 차수에 따른 경우를 확인한다.
+        // 3.
         for(int i=1; i<=n;i++){
             for(int j=1; j<=n; j++){
-                int cnt = 0;
-                for(int k=0; k<m; k++){
+                int cnt = 0; // n 차수마다 시험성적이 앞서는지 check
+                for(int k=0; k<m; k++){ // 시험의 차수
                     int pi=0 , pj=0;
-                    for(int s=0; s<n; s++){
+                    for(int s=0; s<n; s++){ // 시험내 학생의 등수
                         if(arr[k][s]==i) pi=s;
+                        // s = 2
                         if(arr[k][s]==j) pj=s;
+                        // s = 2
                     }
                     if(pi<pj) cnt++;
                 }
