@@ -1,9 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
-
-
+import java.util.*;
 
 
 //Chapter 3
@@ -12,6 +7,46 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Main T = new Main();
+        Scanner sc = new Scanner(System.in);
+        int a = 0 , b = 0;
+        a = sc.nextInt();
+        int[] arr1 = new int[a];
+        for(int x=0; x<a; x++ ){
+            arr1[x] = sc.nextInt();
+        }
+        b = sc.nextInt();
+
+        int[] arr2 = new int[b];
+        for(int x=0; x<b; x++){
+            arr2[x] = sc.nextInt();
+        }
+
+
+        for(int x : T.solution1(a,b,arr1,arr2)){
+            System.out.print(x + " ");
+        }
+
+
+
+
+
+    }
+
+    private int[] solution1(int a , int b , int[] arr1 , int[] arr2) {
+        int[] answer = new int[a+b];
+        List<Integer> ac = new ArrayList<>();
+        for(int x : arr1){
+            ac.add(x);
+        }
+        for(int y : arr2){
+            ac.add(y);
+        }
+
+        answer = ac.stream().sorted().mapToInt(x->x).toArray();
+
+
+        return answer;
     }
 
 
@@ -34,6 +69,10 @@ public class Main {
     5
     2 3 6 7 9
 
+    1 2 3
+    3 4 5 6 7
+    결과
+    1 2 3 3 5 6 7 9
      */
 
 }
