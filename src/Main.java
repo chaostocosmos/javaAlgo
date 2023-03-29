@@ -33,20 +33,44 @@ public class Main {
 
     }
 
-    private int[] solution1(int a , int b , int[] arr1 , int[] arr2) {
-        int[] answer = new int[a+b];
-        List<Integer> ac = new ArrayList<>();
-        for(int x : arr1){
-            ac.add(x);
-        }
-        for(int y : arr2){
-            ac.add(y);
+    private ArrayList<Integer> solution1(int a , int b , int[] arr1 , int[] arr2) {
+        //음 이렇게 풀지말고;
+        // Two Pointers Algorithm
+        //   0 1 2 3 4
+        //   p1 p1을 증가시키면서 확인 while문 사용
+        // a 1 3 5
+        //   p2
+        // b 2 3 6 7 9
+        ArrayList<Integer> answer = new ArrayList<>();
+        int p1=0 , p2=0;
+        while (p1<a && p2<b){
+            if(arr1[p1]<arr2[p2]){
+                answer.add(arr1[p1++]); // 후위 연산
+            }
+            else {
+                answer.add(arr2[p2++]);
+            }
+
         }
 
-        answer = ac.stream().sorted().mapToInt(x->x).toArray();
+        while (p1<a) answer.add(arr1[p1++]);
+        while (p2<b) answer.add(arr2[p2++]);
 
 
         return answer;
+//        int[] answer = new int[a+b];
+//        List<Integer> ac = new ArrayList<>();
+//        for(int x : arr1){
+//            ac.add(x);
+//        }
+//        for(int y : arr2){
+//            ac.add(y);
+//        }
+//
+//        answer = ac.stream().sorted().mapToInt(x->x).toArray();
+//
+//
+//        return answer;
     }
 
 
@@ -64,10 +88,10 @@ public class Main {
     출력
     오름차순으로 정렬된 배열을 출력합니다.
 
-    3
-    1 3 5
-    5
-    2 3 6 7 9
+3
+1 3 5
+5
+2 3 6 7 9
 
     1 2 3
     3 4 5 6 7
