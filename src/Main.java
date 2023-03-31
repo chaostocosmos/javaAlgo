@@ -10,27 +10,47 @@ public class Main {
 
         Main T = new Main();
         Scanner sc = new Scanner(System.in);
-        int a = 0 , b = 0;
-        a = sc.nextInt();
-        int[] arr1 = new int[a];
-        for(int x=0; x<a; x++ ){
+        int n = 0 , k = 0;
+
+        n = sc.nextInt();
+        k = sc.nextInt();
+
+        int[] arr1 = new int[n];
+        for(int x=0; x<n; x++){
             arr1[x] = sc.nextInt();
         }
-        b = sc.nextInt();
-
-        int[] arr2 = new int[b];
-        for(int x=0; x<b; x++){
-            arr2[x] = sc.nextInt();
-        }
 
 
-        for(int x : T.solution2(a,b,arr1,arr2)){
-            System.out.print(x + " ");
-        }
+        System.out.println(T.solution3(n,k,arr1));
 
     }
+
+    private int solution3(int n, int k, int[] arr1) {
+
+        int answer = 0 , p1 = 0 , p2 = k-1;
+        int maxnum = Integer.MIN_VALUE;
+        int temp;
+        while (p2<n){
+
+            temp = 0;
+            for(int i=0; i<k; i++){
+              temp += arr1[p1+i];
+            }
+            if(temp>maxnum){
+                maxnum = temp;
+                answer = maxnum;
+            }
+
+            p1++;
+            p2++;
+
+        }
+        return answer;
+    }
+
     /*
-현수의 아빠는 제과점을 운영합니다. 현수 아빠는 현수에게 N일 동안의 매출기록을 주고 연속된 K일 동안의 최대 매출액이 얼마인지 구하라고 했습니다.
+현수의 아빠는 제과점을 운영합니다. 현수 아빠는 현수에게 N일 동안의 매출기록을 주고
+연속된 K일 동안의 최대 매출액이 얼마인지 구하라고 했습니다.
 만약 N=10이고 10일 간의 매출기록이 아래와 같습니다. 이때 K=3이면
 12 1511 20 2510 20 19 13 15
 연속된 3일간의 최대 매출액은 11+20+25=56만원입니다.
